@@ -17,4 +17,10 @@ Selenium IDE 官方文档翻译。http://www.seleniumhq.org/docs/02_selenium_ide
 - [脚本语法](Script.md)
 - [测试套件](Suites.md)
 - [Selenium 常用命令](Commonly.md)
+- [验证页面元素](Verify.md)
+- [断言和验证](Assertion.md)
+- [定位元素](Locating.md)
+- [匹配文本模式](Patterns.md)
+- [AndWait 命令](AndWait.md)
+- [WaitFor 命令](WaitFor.md)
 - 待续
