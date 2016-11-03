@@ -4,7 +4,7 @@ Selenium IDE 官方文档翻译。http://www.seleniumhq.org/docs/02_selenium_ide
 # 目录
 - [简介](Introduction.md)
 - [安装 Selenium IDE](Install.md)
-- [运行 Selenium IDE](Open.md)
+- [启动 Selenium IDE](Open.md)
 - [IDE 的功能](Features.md)
     - 菜单栏
     - 工具栏
