@@ -4,4 +4,4 @@
 
 
 ---
-[安装 Selenium IDE](Install.md) | [目录](README.md) | [IDE 的功能](Feature.md)
+[安装 Selenium IDE](Install.md) | [目录](README.md) | [IDE 的功能](Features.md)
