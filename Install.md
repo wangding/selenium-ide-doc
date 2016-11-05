@@ -13,4 +13,4 @@
 ![](./images/chapt3_img04_IDE_Installation.png)
 
 ---
-[简介](Introduction.md) | [目录](README.md) | [运行 Selenium IDE](Open.md)
+[简介](Introduction.md) | [目录](README.md) | [启动 Selenium IDE](Open.md)
