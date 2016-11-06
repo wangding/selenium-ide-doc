@@ -72,7 +72,7 @@ Command（命令），Target（目标）和 Value（值），三个字段用来�
 
 ![](images/chapt3_img19_Bottom_Box_Ref.png)
 
-## UI-元素 和 回滚 窗格
+## UI-元素和回滚窗格
 
 ---
 这两个窗格的详细信息（这涉及到高级功能）请在 Selenium IDE 的帮助菜单的 UI-元素 文档中查看。
