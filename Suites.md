@@ -3,7 +3,7 @@
 Selenium IDE 可以用一个简单的 HTML 文件来定义测试套件。语法也很简单。一个 HTML 表格定义了一个测试列表，其中的每一行定义了每个测试文件的路径。举个例子：
 
   
-```
+```html
 <html>
 <head>
 <title>Test Suite Function Tests - Priority 1</title>
