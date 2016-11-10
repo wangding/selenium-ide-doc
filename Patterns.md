@@ -20,10 +20,32 @@
 
 下面例子中，有两个命令使用 globbing 文本模式。在页面上实际的链接文本是 “Film/Television Department”，使用了文本模式而不是准确的文本，click 命令将继续工作，即使链接文本改为“Film & Television Department” 或 “Film and Television Department”。glob 文本模式的星号会匹配 “Film” 单词和 “Television”单词中间的任何符号或者没有符号。
 
-|  **Command**  |  **Target**                                 |   **Value**  |    
+|  命令  |     目标      |   值      |    
 | ------------- | ------------------------------------------- | ------------ |
 |   click       |    link=glob:Film\*Television Department    |              |     
 |  verifyTitle  |    glob:\*Film\*Television\*                |              |     
+
+点击链接所打开页面的实际标题是 “De Anza Film And Television Department - Menu”。通过使用文本模式而不是准确的文本，只要页面标题中的任何地方前后出现 “Film” 和 “Television” 这两个单词，则 verifyTitle 将验证通过。例如，如果网页作者缩短标题为 “Film & Television Department”，测试会通过。在链接文本或者普通文本中使用文本模式将会大大减小测试案例的维护成本。
+
+# 正则表达式文本模式
+
+---
+正则表达式文本模式在 Selenese 支持的三种文本模式中是功能最强大的。很多高级编程语言、很多文本编辑器以及很多工具中都支持正则表达式。包括 Linux / Unix 命令行实用工具 grep、sed 和 awk。在 Selenese 中，正则表达式文本模式允许用户执行许多非常困难的任务。例如，假设测试需要确保一个特定表单元中只包含一个数字。regexp: [0 - 9]+ 这个简单的文本模式，它将匹配任何长度的十进制数。
+
+而 Selenese globbing 文本模式只支持通配符\*和[ ]（字符类）功能，Selenese 正则表达式文本模式提供存在于 JavaScript 中的相同广泛的特殊字符。下面是一个特殊字符的子集：
+
+|  模式   |   匹配                                          |
+| ------------- | ----------------------------------------------  |
+|  .              |   任何单个字符                                  |
+| [ ]             |  字符类：出现在方括号中的任意单个字符  |
+|  \*             |  数量：0 个或多个前面的字符（或者组）   |
+|  + 	         |  数量：1 个或多个前面的字符（或者组）   |
+|  ?            |  数量：0 个或 1 个前面的字符（或者组）  |
+|  {1,5}      |  数量：1 至 5 个 前面的字符（或者组）    |
+| &#124;   |  交替：竖道左边的字符/组或者右边的字符/组 |
+| ( )           | 组：经常用在 and/or 替换的量   |
+
+正则表达式文本模式在 Selenese 命令参数中需要用 regexp: 或 regexpi: 前缀。前者是大小写敏感的，后者是不区分大小写的。
 
 ---
 [启动 Selenium IDE](Open.md) | [目录](README.md) | [制作测试案例](Build.md)
