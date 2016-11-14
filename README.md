@@ -31,7 +31,7 @@ Selenium IDE 官方文档翻译。http://www.seleniumhq.org/docs/02_selenium_ide
 - [AJAX 应用中的 WaitFor 命令](WaitFor.md)
 - [顺序执行和流程控制](Flow.md)
 - [访问器命令和变量参数](Variables.md)
-- [JavaScript 和 Selenese 变量参数](Script.md)
+- [JavaScript 和 Selenese 变量参数](JavaScript.md)
 - [echo - Selenese 打印命令](echo.md)
 - [警告、弹窗和多个窗口](Alert.md)
 - [调试脚本](Debugging.md)
