@@ -1,60 +1,47 @@
-JavaScript 可以用于两种类型的 Selenese 参数：脚本参数和非脚本参数（通常是表达式参数）。很多情况下，你可能需要访问或操作 Selenese 参数中的JavaScript 代码片段中的变量。测试用例中的所有变量被存储在 JavaScript 关联数组中。关联数组用字符串来索引而不是用连续的数字索引。存放测试案例变量的关联数组的变量名是 storedVars。当你想在 JavaScript 代码片段中访问或操作变量时，你需要通过 storedVars['yourVariableName'] 来访问。
+Selenium 的命令很简单，他们包括命令和两个参数。例如：
 
-# 使用 JavaScript 脚本参数
+```
+verifyText 	//div//a[2] 	Login
+```
 
----
-有些 Selenese 命令会指定 script 脚本参数，包括 assertEval, verifyEval, storeEval, waitForEval。这些参数没有需要特殊的语法要求。Selenium IDE 用户只需放置一个 JavaScript 代码片段的到适当的字段，通常是 Target 目标字段（因为脚本参数通常是第一或唯一的参数）。
+参数并不总是必需的，这取决于命令。在某些情况下，两个参数都是必需的，有些情况只需要一个参数，还有些情况可能不需要任何参数。下面有几个例子：
 
-下面的例子说明了如何使用 JavaScript 代码片段来执行一个简单的数值计算：
+```
+goBackAndWait 	  	 
+verifyTextPresent 	  	Welcome to My Home Page
+type 	id=phone 	(555) 666-7066
+type 	id=address1 	${myVariableAddress}
+```
 
-<table class="docutils" border="1">
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><strong>Command</strong></th>
-<th class="head"><strong>Target</strong></th>
-<th class="head"><strong>Value</strong></th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>store</td>
-<td>Edith Wharton</td>
-<td>name</td>
-</tr>
-<tr class="row-odd"><td>storeEval</td>
-<td>storedVars[‘name’].toUpperCase()</td>
-<td>uc</td>
-</tr>
-<tr class="row-even"><td>storeEval</td>
-<td>storedVars[‘name’].toLowerCase()</td>
-<td>lc</td>
-</tr>
-</tbody>
+命令参考中描述每个命令的参数要求。
+
+命令的参数虽各不相同，但是他们通常是:
+
+* locatoer 定位器用来识别页面中的UI元素。
+* text pattern 文本模式用来验证或断言页面内容。
+* text pattern 文本模式或Selenium变量用来在文本输入域中输入文本或在选项列表中选择一个选项。
+
+定位器、文本模式，Selenium变量和命令本身在selenium command中有非常详细地描述。 　　 　　
+
+Selenium IDE中运行的脚本，会存储在一个HTML格式的文本文件中。他被包含在一个三列的HTML表格中。第一列是Selenium command（命令），第二个target（目标），最后一列是value（值）。第二列和第三列可能不需要取决于所选的Selenium命令，但他们应该存在。每个表格行代表一个新的Selenium命令。这是一个测试的例子，打开一个页面，断言页面标题，然后验证页面上的一些内容：
+
+```
+<table>
+    <tr><td>open</td><td>/download/</td><td></td></tr>
+    <tr><td>assertTitle</td><td></td><td>Downloads</td></tr>
+    <tr><td>verifyText</td><td>//h2</td><td>Downloads</td></tr>
 </table>
+```
+在浏览器中呈现为一个表这样子如下：
 
-下一个示例演示了如何在 JavaScript 代码片段中调用方法，示例代码中，JavaScript 字符串对象调用了 toUpperCase 方法和 toLowerCase 方法。
+```
+open 	/download/ 	 
+assertTitle 	  	Downloads
+verifyText 	//h2 	Downloads
+```
 
-# 使用非脚本参数
+Selenese HTML语法可以用来编写和运行测试，而无需编程语言的知识。有了selenese 的基本知识和selenium IDE你可以快速制作和运行测试案例。
 
----
-JavaScript 脚本还可以用于生成参数的值，即使没有指定参数是 script 脚本类型。在这种情况下，通过使用特殊的语法，即整个参数值由 javascript 做前缀，在花括号中放置代码片段，例如：javascript { * 这里是你的代码 * }。下面的例子中在 type 命令的第二个 value 值参数中通过 JavaScript 代码使用这个特殊语法产生参数值：
-
-<table class="docutils" border="1">
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><strong>Command</strong></th>
-<th class="head"><strong>Target</strong></th>
-<th class="head"><strong>Value</strong></th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>store</td>
-<td>league of nations</td>
-<td>searchString</td>
-</tr>
-<tr class="row-odd"><td>type</td>
-<td>q</td>
-<td>javascript{storedVars[‘searchString’].toUpperCase()}</td>
-</tr>
-</tbody>
-</table>
 
 ---
 [访问器命令和变量参数](Variables.md) | [目录](README.md) | [echo - Selenese 打印命令](echo.md)
