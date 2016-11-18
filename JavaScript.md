@@ -7,28 +7,11 @@ JavaScript 可以用于两种类型的 Selenese 参数：脚本参数和非脚�
 
 下面的例子说明了如何使用 JavaScript 代码片段来执行一个简单的数值计算：
 
-<table class="docutils" border="1">
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><strong>Command</strong></th>
-<th class="head"><strong>Target</strong></th>
-<th class="head"><strong>Value</strong></th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>store</td>
-<td>Edith Wharton</td>
-<td>name</td>
-</tr>
-<tr class="row-odd"><td>storeEval</td>
-<td>storedVars[‘name’].toUpperCase()</td>
-<td>uc</td>
-</tr>
-<tr class="row-even"><td>storeEval</td>
-<td>storedVars[‘name’].toLowerCase()</td>
-<td>lc</td>
-</tr>
-</tbody>
-</table>
+|  命令                       |                 目标                                                            |   值  |    
+| ----------- | ---------------------------------------- | --- |
+| store       | Edith Wharton |  name   |     
+| storeEval | storedVars[‘name’].toUpperCase()           | uc    |
+| storeEval | storedVars[‘name’].toLowerCase() |  lc         |
 
 下一个示例演示了如何在 JavaScript 代码片段中调用方法，示例代码中，JavaScript 字符串对象调用了 toUpperCase 方法和 toLowerCase 方法。
 
@@ -37,24 +20,10 @@ JavaScript 可以用于两种类型的 Selenese 参数：脚本参数和非脚�
 ---
 JavaScript 脚本还可以用于生成参数的值，即使没有指定参数是 script 脚本类型。在这种情况下，通过使用特殊的语法，即整个参数值由 javascript 做前缀，在花括号中放置代码片段，例如：javascript { * 这里是你的代码 * }。下面的例子中在 type 命令的第二个 value 值参数中通过 JavaScript 代码使用这个特殊语法产生参数值：
 
-<table class="docutils" border="1">
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><strong>Command</strong></th>
-<th class="head"><strong>Target</strong></th>
-<th class="head"><strong>Value</strong></th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>store</td>
-<td>league of nations</td>
-<td>searchString</td>
-</tr>
-<tr class="row-odd"><td>type</td>
-<td>q</td>
-<td>javascript{storedVars[‘searchString’].toUpperCase()}</td>
-</tr>
-</tbody>
-</table>
+|  命令                       |                 目标                                                            |   值  |    
+| ----------- | ---------------------------------------- | --- |
+| store       | league of nations |  searchString   |     
+| type | q           | javascript{storedVars[‘searchString’].toUpperCase()}    |
 
 ---
 [访问器命令和变量参数](Variables.md) | [目录](README.md) | [echo - Selenese 打印命令](echo.md)
