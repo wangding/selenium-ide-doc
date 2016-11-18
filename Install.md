@@ -3,7 +3,7 @@
 出于保护的目的，火狐浏览器会阻止你从不熟悉的地点安装插件，你需要点击“Allow”来继续安装，如下图所示。
 ![](./images/chapt3_img01_IDE_Installation.png)
 
-当火炉浏览器下载插件的时候，会出现下面的窗口。
+当火狐浏览器下载插件的时候，会出现下面的窗口。
 ![](./images/chapt3_img02_IDE_Installation.png)
 
 点击“Install Now”。火狐浏览器会弹出组件管理窗口，首先显示一个进度条，然后下载结束，如下图所示。
