@@ -207,4 +207,4 @@ CSS（Cascading Style Sheets，层叠样式表）是用于描述 HTML 和 XML �
 - 定位器开始于 document 将使用DOM定位策略。
 
 ---
-[断言和验证](Assertion.md) | [目录](README.md) | [匹配文本模式](Pattern.md)
+[断言和验证](Assertion.md) | [目录](README.md) | [匹配文本模式](Patterns.md)
