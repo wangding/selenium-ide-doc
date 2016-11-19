@@ -74,30 +74,43 @@
 |  assertAlert  |    I'm blocking!     |              |
 |  verifyTextPresent  |    Alert is gone.                |              |
 
-你可能会奇怪，并没有试图添加警告弹窗的断言。这些都是 selenium IDE 处理并关闭了警告弹窗。如果你断言的命令去掉，然后回放脚本，你会收到以下错误错误：
+你可能会奇怪，并没有试图添加警告弹窗的断言。这些都是 selenium IDE 处理并关闭了警告弹窗。如果你断言的命令去掉，然后回放脚本，你会收到以下错误错误：   
 [error] Error: There was an unexpected Alert! [I'm blocking!]
+
 你必须在脚本中包含一个断言来承认弹窗的存在。
 
 如果你只是想断言警告弹窗出现了，并不关心它包含的文本是什么，这时可以使用 assertAlertPresent。他将返回真或假，当返回假时，停止测试。
 
 # Confirmations 确认弹窗
 
-确认的行为一样警报、assertConfirmation和assertConfirmationPresent提供警报同行一样的特征。然而,默认情况下硒会弹出一个确认时选择OK。试着记录点击显示确认boxa按钮示例页面,但是点击Cancela按钮弹出,然后断言输出文本。您的测试可能会看起来像这样:
+确认弹窗的行为跟警告弹窗类似，assertConfirmation 和 assertConfirmationPresent 提供与警告弹窗命令类似的功能。默认情况下，弹出的确认弹窗后，Selenium 会选择“OK”。试着录制下列操作，在示例页面上点击“显示确认弹窗”的按钮，然后在确认弹窗框中选择 “Cancel” 按钮 ，然后断言输出的文本。录制好的测试案例看上去可能像下面这样:
 
-表格4
+|  命令                       |                 目标                                                            |   值  |    
+| ----------- | ---------------------------------------- | --- |
+| open       | /  |  |        
+| click | btnConfirm           |     |
+| chooseCancelOnNextConfirmation |  |  |
+| assertConfirmation | Choose an option. !           |     | verifyTextPresent  | Rejected  |  |
 
-chooseCancelOnNextConfirmation函数告诉硒都确认后应返回false。它可以通过调用chooseOkOnNextConfirmation重置。
 
-您可能会注意到,你不能重复这个测试,因为硒抱怨说有一个未处理的确认。这是因为Selenium ide记录导致的事件的顺序点击chooseCancelOnNextConfirmation放在错误的订单(是有道理的,如果你仔细想想,硒迦南t知道百度再保险取消之前你打开一个确认)只要切换这两个命令,您的测试将会很好。
+chooseCancelOnNextConfirmation 函数告诉 Selenium 所有后续的确认应返回 false。它可以通过调用 chooseOkOnNextConfirmation 来重置。
+
+请注意，此测试案例不能正常回放，届时 Selenium 会提示有一个未处理的确认。这是因为 Selenium IDE 录制事件的顺序错误导致的 Click 和 chooseCancelOnNextConfirmation 两个命令的顺序错误。（仔细想想，Selenium 并不知道在你打开一个确认弹窗之前会取消操作）只要交换前后这两个命令的位置，测试案例就会正常工作。
 
 # Prompts 提示弹窗
 
-提示的行为一样警报、assertPrompt和assertPromptPresent提供警报同行一样的特征。默认情况下,硒将等待你输入数据时,弹出的提示。试着记录点击显示prompta按钮示例页面和输入Seleniuma提示。您的测试可能会看起来像这样:
+提示弹窗的行为跟警告弹窗类似，assertPrompt 和 assertPromptPresent 提供与警告弹窗命令类似的功能。默认情况下，弹出的提示信息后，Selenium 将等待你输入数据。试着录制下列操作，在示例页面上点击“显示提示弹窗”的按钮，然后在提示框中输入 Selenium 。录制好的测试案例看上去可能像下面这样:
 
-表格5
+|  命令                       |                 目标                                                            |   值  |    
+| ----------- | ---------------------------------------- | --- |
+| open       | /  |  |     
+| answerOnNextPrompt | Selenium!           |     |    
+| click | id=btnPrompt           |     |
+| assertPrompt | What’s the best web QA tool?           |     |
+| verifyTextPresent | Selenium!           |     |
 
-如果你选择取消的提示,您可能会注意到,answerOnNextPrompt只会显示一个空白的目标。硒(c¡)将取消和一个空白的输入提示基本上是一样的。
+如果你在提示弹窗上点选取消按钮，你可能会注意到，answerOnNextPrompt 只会显示一个空白的目标。在提示弹窗上 Selenium 对待取消和一个空白的输入是一样的。
 
 
 ---
-[JavaScript 和 Selenese 脚本参数](Script.md) | [目录](README.md) | [警告、弹窗和多个窗口](Alerts.md)
+[echo - Selenese 打印命令](echo.md) | [目录](README.md) | [调试脚本](Debug.md)
