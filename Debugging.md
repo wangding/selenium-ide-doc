@@ -52,4 +52,4 @@ Selenium IDE 通过设置断点可以让运行中的测试脚本在断点处暂�
 
 
 ---
-[警告、弹窗和多个窗口](Alert.md) | [目录](README.md) | [编写测试套件](Suites.md)
+[警告、弹窗和多个窗口](Alert.md) | [目录](README.md) | [编写测试套件](TestSuite.md)
