@@ -113,4 +113,4 @@ chooseCancelOnNextConfirmation 函数告诉 Selenium 所有后续的确认应返
 如果你在提示弹窗上点选取消按钮，你可能会注意到，answerOnNextPrompt 只会显示一个空白的目标。在提示弹窗上 Selenium 对待取消和一个空白的输入是一样的。
 
 ---
-[echo - Selenese 打印命令](echo.md) | [目录](README.md) | [调试](Debugging.md)
+[echo - Selenese 打印命令](echo.md) | [目录](README.md) | [调试脚本](Debugging.md)
