@@ -4,7 +4,7 @@ Selenium 提供了一组丰富的命令，以几乎任何你可以想象的方�
   
 例如，利用 selenese，你可以依据 UI 元素的 HTML 标记来测试该 UI 元素在页面上是否存在，测试页面上的具体内容，测试失效链接，输入字段，下拉列表选择，待提交的表单，表格数据，等等。此外，Selenium 命令还能测试窗口大小，鼠标位置、alerts 信息、Ajax 功能，弹出窗口，事件处理，以及许多其他 web 应用程序的特性。[命令参考](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html)中列出了所有可用的命令。
 
-命令会告诉 Selenium 做什么。Selenium 命令分三大类：Action 动作，Accessors 访问器和 Assertions 判断。
+命令会告诉 Selenium 做什么。Selenium 命令分三大类：Action 动作，Accessors 访问器和 Assertions 判断。
 
 - Action 动作类命令，一般用来操作应用程序的状态。他们做的事情，类似：点击这个链接、选择那个选项。如果动作失败，或者有错误，当前测试会停止执行。
 
