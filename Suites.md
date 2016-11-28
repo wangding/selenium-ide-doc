@@ -21,7 +21,7 @@ Selenium IDE 可以用一个简单的 HTML 文件来定义测试套件。语法�
 
 类似上面这个文件这将允许 Selenium IDE 逐一运行测试。 
   
-测试套件还可以用 Selenium RC 来维护。通过编程，可以有多种实现方式。如果使用 Selenium RC 和 Java，通常使用 Junit 来维护一个测试套件。此外，如果使用 C# 语言，Nunit 可以用来维护测试套件。如果使用解释型语言像 Python，Selenium RC 需要添加一些简单的编程，来建立一个测试套件。Since the whole reason for using Selenium-RC is to make use of programming logic for your testing this usually isn’t a problem.
+测试套件还可以用 Selenium RC 来维护。通过编程，可以有多种实现方式。如果使用 Selenium RC 和 Java，通常使用 Junit 来维护一个测试套件。此外，如果使用 C# 语言，Nunit 可以用来维护测试套件。如果使用解释型语言像 Python，Selenium RC 需要添加一些简单的编程，来建立一个测试套件。因为 Selenium RC 可以使用程序代码的编程逻辑，所以实现测试套件并不困难。
 
 ---
 [脚本语法](Script.md) | [目录](README.md) | [Selenium 常用命令](Commonly.md)
