@@ -191,7 +191,7 @@ CSS（Cascading Style Sheets，层叠样式表）是用于描述 HTML 和 XML �
 - css=#loginForm input[type="button"] (7)
 - css=#loginForm input:nth-child(2) (5)
 
-关于 CSS 选择器的更多信息，请参考 W3C publication。你会在那里找到额外的资料。
+关于 CSS 选择器的更多信息，请参考 W3C publication。你会在那里找到额外的资料。
 
 **注意**
 
