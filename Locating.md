@@ -30,7 +30,7 @@
 ## ID 定位
 
 ---
-这种类型的定位器比 identifier 定位器类型限制更多，但也更加明确。当你知道一个元素的 id 属性时使用这个定位器。
+这种类型的定位器比 identifier 定位器类型限制更多，但也更加明确。当你知道一个元素的 id 属性时使用这个定位器。
 
 ```html
  <html>
@@ -83,7 +83,7 @@ XPath 是用于定位 XML 文档中节点的语言。由于 HTML 可以实现为
 
 绝对的 XPath 包含从根(html)所有元素的位置，因此只要轻微的调整应用程序页面，XPath 就会失效。通过寻找附近的 id 或 name 属性的元素（理想情况下是一个父元素）可以基于这种位置关系来定位你的目标元素。这种位置关系通常不太可能改变，可以使你的测试更加健壮。
 
-因为只有 XPath 定位器从 // 开始，所以在指定 XPath 定位器时没有必要包含 xpath = label。
+因为只有 XPath 定位器从 // 开始，所以在指定 XPath 定位器时没有必要包含 xpath = label。
 
 ```html
 <html>
@@ -98,24 +98,24 @@ XPath 是用于定位 XML 文档中节点的语言。由于 HTML 可以实现为
 <html>
 ```
 
-- xpath=/html/body/form[1] (3) - 绝对路径（对HTML轻微的修改会令此路径失效）
-- //form[1] (3) - HTML中的第一个form 元素
-- xpath = //form[@id = 'loginForm'] (3) - 拥有id属性值为loginForm的element元素
-- xpath=//form[input/@name='username'] (3) - First form element with an input child element with attribute named ‘name’ and the value ‘username’
-    //input[@name='username'] (4) - First input element with attribute named ‘name’ and the value ‘username’
-    //form[@id='loginForm']/input[1] (4) - First input child element of the form element with attribute named ‘id’ and the value ‘loginForm’
-    //input[@name='continue'][@type='button'] (7) - Input with attribute named ‘name’ and the value ‘continue’ and attribute named ‘type’ and the value ‘button’
-    //form[@id='loginForm']/input[4] (7) - Fourth input child element of the form element with attribute named ‘id’ and value ‘loginForm’
+- xpath=/html/body/form[1] (3) - 绝对路径（对 HTML 轻微的修改会令此路径失效）  
+- //form[1] (3) - HTML中的第一个form 元素  
+- xpath = //form[@id = 'loginForm'] (3) - 拥有 id 属性值为 loginForm 的 element 元素  
+- xpath=//form[input/@name='username'] (3) - 拥有一个 input 子元素，该元素的 name 属性值为 username 的第一个表单元素  
+- //input[@name='username'] (4) - name 属性值为 username 的第一个 input 元素  
+- //form[@id='loginForm']/input[1] (4) - id 为 loginForm 的表单元素的第一个 input 子元素  
+- //input[@name='continue'][@type='button'] (7) - name 属性值为 continue 以及 type 属性值为 button 的 input 元素   
+- //form[@id='loginForm']/input[4] (7) - id 属性值为 loginForm 的表单的第四个 input 子元素  
 
-These examples cover some basics, but in order to learn more, the following references are recommended:
+上面的例子都很基础，如果想更深入的学习，请参考下面的学习资料：
 
-    W3Schools XPath Tutorial
-    W3C XPath Recommendation
+- [W3Schools XPath Tutorial](http://www.w3schools.com/Xpath/)
+- [W3C XPath Recommendation](http://www.w3schools.com/Xpath/)
 
-There are also a couple of very useful Firefox Add-ons that can assist in discovering the XPath of an element:
+下面是一些非常有用的火狐浏览器的插件，能辅助定位 XPath 中的元素：
 
-    XPath Checker - suggests XPath and can be used to test XPath results.
-    Firebug - XPath suggestions are just one of the many powerful features of this very useful add-on.
+- [XPath Checker](https://addons.mozilla.org/en-US/firefox/addon/1095?id=1095) - 生成  XPath 并检查 XPath 的有效性  
+- [Firebug](https://addons.mozilla.org/en-US/firefox/addon/1843) - 非常强大而有用的插件， XPath 只是其中很小的功能    
 
 
 ## Link Text 定位超链接
@@ -195,7 +195,7 @@ CSS（Cascading Style Sheets，层叠样式表）是用于描述 HTML 和 XML �
 
 **注意**
 
-最有经验的 Selenium 用户推荐 CSS 作为他们的定位策略，因为 CSS 选择器速度大大快于 XPath 并且可以在一个 HTML 文档中找到最复杂的对象。
+经验丰富的 Selenium 用户推荐 CSS 作为他们的定位策略，因为 CSS 选择器速度大大快于 XPath 并且可以在一个 HTML 文档中找到最复杂的对象。
 
 ## 隐式定位器
 
