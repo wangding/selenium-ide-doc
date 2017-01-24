@@ -1,3 +1,5 @@
 # 忽略 HBuilder 创建的 .project 文件
 .project
 
+# GFM Viewer 创建的隐藏文件
+.*.md.html
