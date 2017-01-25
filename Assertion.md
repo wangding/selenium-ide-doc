@@ -15,7 +15,6 @@
 
 ## verifyTextPresent
 
----
 命令 verifyTextPresent 用于验证页面上是否存在指定的文本。此命令需要一个文本模式参数，用来做验证。例如：
 
 |  命令                       |                 目标                                  |   值  |    
@@ -26,7 +25,6 @@
 
 ## verifyElementPresent
 
----
 用这个命令来测试特定的 UI 元素，而不是其内容，出现在页面上。这个验证不检查文本而是检查 HTML 标记。一个常见的用法是检查一个图片的存在。
 
 |  命令                       |                 目标                                                            |   值  |    
@@ -50,7 +48,6 @@ verifyElementPresent 可以被用来检查页面中存在的任何HTML标签。�
 
 ## verifyText
 
----
 当文本和它的UI元素都必须被测试时使用 verifyText 命令。verifyText 必须使用定位器。如果你选择 XPath 或 DOM 定位器，您可以验证在页面上特定的文本相对于其他 UI 组件出现在页面上的特定的位置。
 
 |  命令                       |                 目标                                                            |   值  |    

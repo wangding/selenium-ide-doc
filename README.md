@@ -1,7 +1,9 @@
 # SeleniumIDEDoc
+
 Selenium IDE 官方文档翻译。http://www.seleniumhq.org/docs/02_selenium_ide.jsp
 
 # Selenium IDE目录
+
 - [简介](Introduction.md)
 - [安装 Selenium IDE](Install.md)
 - [启动 Selenium IDE](Open.md)
@@ -67,6 +69,7 @@ Selenium IDE 官方文档翻译。http://www.seleniumhq.org/docs/02_selenium_ide
 - [排错](Troubleshooting.md)
 
 # 测试设计目录
+
 - [测试设计介绍](TestDesignIntro.md)  
 - [测试类型](Types.md)  
 - [验证测试结果](Validating.md)
