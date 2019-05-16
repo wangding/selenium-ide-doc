@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "node"
+
+after_script:
+  - gitbook install
+  - gitbook build
+  - cd ./_book
+  - git init
+  - git config user.name "${USER_NAME}"
+  - git config user.email "${USER_EMAIL}"
+  - cp ../CNAME .
+  - git add .
+  - git commit -m "publish gitbook"
+  - git push --force --quiet "https://${ACC_TOKEN}@${GH_REF}" master:${BRANCH}
+
+branches:
+  only:
+    - master

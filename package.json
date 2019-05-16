@@ -1,0 +1,22 @@
+{
+  "name": "selenium-ide-doc",
+  "version": "1.0.0",
+  "description": "Selenium IDE 帮助文档",
+  "scripts": {
+    "test": "echo \"nothing to test!\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangding/selenium-ide-doc.git"
+  },
+  "author": "wangding",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wangding/selenium-ide-doc/issues"
+  },
+  "homepage": "https://github.com/wangding/selenium-ide-doc#readme",
+  "devDependencies": {
+    "books-cli": "^1.0.21",
+    "gitbook-cli": "^2.3.2"
+  }
+}
