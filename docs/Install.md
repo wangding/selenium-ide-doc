@@ -1,3 +1,5 @@
+# 安装 Selenium IDE
+
 首先，用火狐浏览器从 SeleniumHQ [下载页面](http://seleniumhq.org/download/)下载 IDE。
 
 出于保护的目的，火狐浏览器会阻止你从不熟悉的地点安装插件，你需要点击“Allow”来继续安装，如下图所示。

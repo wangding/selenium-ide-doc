@@ -1,3 +1,5 @@
+# 访问器命令和变量参数
+
 在脚本的开头，可以使用 Selenium 变量来存储常数。另外，在数据驱动测试中（将在后面一节中讨论），Selenium 变量可用于存储从命令行，从另一个程序，或从一个文件中传递的数据。
 
 store 命令是所有存储命令中最基础的命令，它仅仅能把一个常量存储在一个 Selenium 变量中。它包括两个参数，存储的文本值和 Selenium 变量。使用标准的变量命名约定来为变量起名，即变量名中只能包含字母和数字。
@@ -25,15 +27,12 @@ Selenium 变量可以用在第一或第二个参数，并且相比较其他操�
 
 **storeElementPresent**
 
----
 对应于 verifyElementPresent 命令。它存储一个布尔值 true 或 false ，取决于 UI 元素是否出现。
 
 **storeText**
 
----
 StoreText 对应于 verifyText 命令。它使用一个定位器来识别页面文本。如果找到文本，则存储在变量中。StoreText 可以用来提取被测页面中的文本信息。
 
 **storeEval**
 
----
 该命令需要一个脚本作为第一个参数。在 Selenese 中使用 JavaScript 参数，将在下一节中介绍。StoreEval 允许将 JavaScript 脚本运行的结果存储在一个变量中。

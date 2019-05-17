@@ -1,3 +1,5 @@
+# 警告、弹窗和多个窗口
+
 假设有一个测试页面，其代码如下所示。
 
 ```html
@@ -63,8 +65,8 @@
 当 Selenium 运行时，JavaScript 弹窗将不会出现。这是因为 JavaScript 的函数调用，在运行时被 Selenium 自己的 JavaScript 代码覆盖。然而，没看到弹窗，并不意味着不用处理它。通过调用 AssertFoo(pattern) 来处理弹窗。如果弹窗显示的断言失败了，测试会暂停并提示类似下面的错误信息：
 [error] Error: There was an unexpected Confirmation! [Chose an option.]
 
+## Alerts 警告弹窗
 
-# Alerts 警告弹窗
 首先介绍警告弹窗，因为这是要处理的最简单的弹窗。首先，在浏览器中打开上面的 HTML 示例文件，单击“显示警告”弹窗按钮。请注意，当你关闭警告弹窗后，页面上会显示“Alert is gone.”。现在，在 Selenium IDE 的录制模式下，重复刚才的操作，注意文本验证命令在关闭弹窗后会自动加到了脚本中。录制好的测试案例将会是下面的样子：
 
 |  命令  |     目标  |   值      |    
@@ -81,7 +83,7 @@
 
 如果你只是想断言警告弹窗出现了，并不关心它包含的文本是什么，这时可以使用 assertAlertPresent。他将返回真或假，当返回假时，停止测试。
 
-# Confirmations 确认弹窗
+## Confirmations 确认弹窗
 
 确认弹窗的行为跟警告弹窗类似，assertConfirmation 和 assertConfirmationPresent 提供与警告弹窗命令类似的功能。默认情况下，弹出确认弹窗后，Selenium 会选择“OK”。试着录制下列操作，在示例页面上点击“显示确认弹窗”的按钮，然后在确认弹窗框中选择 “Cancel” 按钮 ，然后断言输出的文本。录制好的测试案例看上去可能像下面这样：
 
@@ -98,11 +100,11 @@ chooseCancelOnNextConfirmation 函数告诉 Selenium 所有后续的确认应返
 
 请注意，此测试案例不能正常回放，届时 Selenium 会提示有一个未处理的确认。这是因为 Selenium IDE 录制事件的顺序错误导致的 Click 和 chooseCancelOnNextConfirmation 两个命令的顺序错误。（仔细想想，Selenium 并不知道在你打开一个确认弹窗之前会取消操作）只要交换前后这两个命令的位置，测试案例就会正常工作。
 
-# Prompts 提示弹窗
+## Prompts 提示弹窗
 
 提示弹窗的行为跟警告弹窗类似，assertPrompt 和 assertPromptPresent 提供与警告弹窗命令类似的功能。默认情况下，弹出的提示信息后，Selenium 将等待你输入数据。试着录制下列操作，在示例页面上点击“显示提示弹窗”的按钮，然后在提示框中输入 Selenium 。录制好的测试案例看上去可能像下面这样：
 
-|  命令                       |                 目标                                                            |   值  |    
+|  命令      |        目标                             |   值  |    
 | ----------- | ---------------------------------------- | --- |
 | open       | /  |  |     
 | answerOnNextPrompt | Selenium!           |     |    

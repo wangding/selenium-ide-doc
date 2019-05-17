@@ -1,3 +1,5 @@
+# 排错
+
 下面成对的图片/解释列表描述了 Selenium IDE 中经常会出现的问题及原因：
 
 _Table view is not available with this format._  

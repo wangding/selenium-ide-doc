@@ -1,3 +1,5 @@
+# 用户自定义扩展
+
 用户自定义扩展是用户自己创建的 JavaScript 文件，对 Selenium IDE 现有的功能进行定制以及功能扩展。通常这种定制和扩展是以自定义命令的形式来体现的，当然也不仅限于命令。
 
 [这里](http://wiki.openqa.org/display/SEL/Contributed+User-Extensions)可以找到很多有用的扩展。

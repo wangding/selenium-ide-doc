@@ -1,8 +1,10 @@
+# 匹配文本模式
+
 类似定位器参数，文本模式是另一种常用的 Selenium 命令参数。需要使用文本模式的命令，例如：verifyTextPresent, verifyTitle, verifyAlert, assertConfirmation, verifyText, verifyPrompt。上面已经提到，LinkText 定位器可使用文本模式。文本模式使用特殊字符来模糊匹配预期的文本，而不必准确的描述该文本。
 
 有三种类型的模式：Globbing 模式，正则表达式和 exact。
 
-# Globbing 模式
+## Globbing 模式
 
 很人都熟悉 globbing ，因为在 DOS 或 Unix / Linux 命令行下经常用 globbing 模式来匹配文件名，如： ls *.c。这个例子中，globbing 模式用于匹配当前目录下所有的 .c 扩展名的文件。Globbing 的功能很有限。Selenium 只支持和实现两个特殊字符：
 
@@ -26,7 +28,7 @@
 
 点击链接所打开页面的实际标题是 “De Anza Film And Television Department - Menu”。通过使用文本模式而不是准确的文本，只要页面标题中的任何地方前后出现 “Film” 和 “Television” 这两个单词，则 verifyTitle 将验证通过。例如，如果网页作者缩短标题为 “Film & Television Department”，测试会通过。在链接文本或者普通文本中使用文本模式将会大大减小测试案例的维护成本。
 
-# 正则表达式文本模式
+## 正则表达式文本模式
 
 正则表达式文本模式在 Selenese 支持的三种文本模式中是功能最强大的。很多高级编程语言、很多文本编辑器以及很多工具中都支持正则表达式。包括 Linux / Unix 命令行实用工具 grep、sed 和 awk。在 Selenese 中，正则表达式文本模式允许用户执行许多非常困难的任务。例如，假设测试需要确保一个特定表单元中只包含一个数字。regexp: [0 - 9]+ 这个简单的文本模式，它将匹配任何长度的十进制数。
 
@@ -70,7 +72,7 @@
 | [0-9]{1,2}  |  2 位数字（表示分钟）后面跟一个空格         |
 |  [ap]m      |  a 或者 p 后面跟着 m 字符，表示 ap 或者 pm  |
 
-# Exact 文本模式
+## Exact 文本模式
 
 Selenium 的 exact 文本模式只有非常少的使用场合。这种文本模式没有什么特殊字符，所以顾名思义称为准确模式。所以，当你需要匹配一个包含星号的文本时，globbing 和正则表达式都是用星号作为特殊字符，这时 exact 文本模式就派上用场了。例如，你想在下拉列表中选择 “Real *” 选项，下面的代码可能有效或者无效。glob:Real * 文本模式将匹配 Real 开头的任何字符串。这样，如果这个选项前面有一个选项文本为 “Real Numbers”，这个选项将匹配成功，而不是 “Real *”。
 

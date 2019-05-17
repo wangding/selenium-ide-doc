@@ -1,3 +1,5 @@
+# AndWait 命令
+
 命令（如常见的 click )与 AndWait 后缀命令的区别是，普通命令会执行动作，并以最快的速度继续执行下面的命令，而 AndWait 后缀命令（如 clickAndWait ）告诉 Selenium 在动作完成后等待页面加载完成。
 
 AndWait 后缀命令经常用在浏览器导航到另一个页面或重新加载当前页面时。 
