@@ -3,28 +3,37 @@
   "discription": "Selenium IDE 帮助文章",
   "author": "王顶",
   "language": "zh-hans",
-"plugins": [
+  "plugins": [
     "-lunr",
     "-search",
     "-highlight",
     "-sharing",
-    "books",
     "edit-link",
+    "forkmegithub",
+    "search-plus",
     "sharing-plus",
-    "github-buttons@2.1.0"
+    "anchor-navigation-ex",
+    "copy-code-button",
+    "prism",
+    "github-buttons@2.1.0",
+    "splitter",
+    "image-captions-extended",
+    "bsz",
+    "fancybox",
+    "image-wrapper"
   ],
   "pluginsConfig": {
-    "books": {
-      "prism_themes": "prismjs/themes/prism.css",
-      "github_url": "https://github.com/wangding/selenium-ide-doc"
-    },
-    "theme-default": {
-      "showLevel": false
+    "anchor-navigation-ex": {
+      "multipleH1": false
     },
     "github-buttons": {
       "repo": "wangding/selenium-ide-doc",
       "types": ["star"],
       "size": "small"
+    },
+    "forkmegithub": {
+      "url": "https://github.com/wangding/selenium-ide-doc",
+      "color": "red"
     },
     "edit-link": {
       "base": "https://github.com/wangding/selenium-ide-doc/blob/master/",
@@ -51,6 +60,15 @@
       "all": [
         "weibo", "douban", "qzone", "qq"
       ]
+    },
+    "image-captions": {
+      "caption": "图：_CAPTION_"
+    },
+    "bsz": {
+      "copyright": "2016&nbsp;-&nbsp;<span class=\"bsz-this-year\"></span>&nbsp;by&nbsp;<a href=\"https://i.wangding.in\">王顶</a>.&nbsp;All rights reserved."
     }
+  },
+  "styles": {
+    "website": "styles/website.css"
   }
 }
