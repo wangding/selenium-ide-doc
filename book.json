@@ -20,9 +20,18 @@
     "image-captions-extended",
     "bsz",
     "fancybox",
-    "image-wrapper"
+    "image-wrapper",
+    "gtalk"
   ],
   "pluginsConfig": {
+    "gtalk": {
+      "clientID": "c0fb01d8974fad3f4b9e",
+      "clientSecret": "14af1e32e0a8bedc62a6e3ce097ae2fc5e8cc1d8",
+      "repo": "selenium-ide-doc",
+      "owner": "wangding",
+      "admin": ["wangding"],
+      "labels": ["SeIDE"]
+    },
     "anchor-navigation-ex": {
       "multipleH1": false
     },
