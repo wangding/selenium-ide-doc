@@ -58,7 +58,7 @@
       "color": "red"
     },
     "edit-link": {
-      "base": "https://github.com/wangding/selenium-ide-doc/blob/master/",
+      "base": "https://github.com/wangding/selenium-ide-doc/blob/master/3.9/",
       "label": "编辑本页"
     },
     "sharing": {

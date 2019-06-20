@@ -8,7 +8,7 @@ module.exports = function (grunt) {
       files: {
         expand: true,
         cwd: '_book',
-        src: ['*.html', 'docs/*.html'],
+        src: ['*.html', '2.9/*.html'],
         dest: 'dist/'
       }
     },
@@ -16,7 +16,7 @@ module.exports = function (grunt) {
       files: {
         expand: true,
         cwd: '_book',
-        src: ['gitbook/**/*.css'],
+        src: ['gitbook/**/*.css', '2.9/gitbook/**/*.css'],
         dest: 'dist/'
       }
     },
@@ -25,7 +25,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '_book',
-          src: ['gitbook/**/*.js', '!gitbook/gitbook-plugin-anchor-navigation-ex/**/*.js'],
+          src: ['gitbook/**/*.js', '2.9/gitbook/**/*.js', '!gitbook/gitbook-plugin-anchor-navigation-ex/**/*.js', '!2.9/gitbook/gitbook-plugin-anchor-navigation-ex/**/*.js'],
           dest: 'dist/'
         }]
       }
@@ -35,7 +35,7 @@ module.exports = function (grunt) {
         files: [{
             expand: true,
             cwd: 'dist',
-            src: ['*.html', 'docs/*.html'],
+            src: ['*.html', '2.9/*.html'],
             dest: '_book/'
         }]
       },
@@ -43,7 +43,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'dist',
-          src: ['gitbook/**'],
+          src: ['gitbook/**', '2.9/gitbook/**'],
           dest: '_book/'
         }]
       }

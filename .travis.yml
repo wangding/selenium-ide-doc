@@ -4,14 +4,13 @@ node_js:
 
 after_script:
   - gitbook install
-  - gitbook build
+  - cp -r node_modules 3.9/
+  - cp -r node_modules 2.9/
+  - gitbook build 3.9/ _book
+  - gitbook build 2.9/ _book/2.9/
   - grunt minify
   - cp CNAME _book
-  - git checkout master
-  - gitbook install
-  - gitbook build . book/2.9
-  - grunt minify
-  - cd ./_book
+  - cd _book
   - git init
   - git config user.name "${USER_NAME}"
   - git config user.email "${USER_EMAIL}"
@@ -21,4 +20,4 @@ after_script:
 
 branches:
   only:
-    - v3.9
+    - master
