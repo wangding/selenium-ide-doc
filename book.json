@@ -21,9 +21,21 @@
     "bsz",
     "fancybox",
     "image-wrapper",
-    "gtalk"
+    "gtalk",
+    "versions-select"
   ],
   "pluginsConfig": {
+    "versions": {
+      "options": [
+      {
+        "value": "https://selenium.wangding.in",
+        "text": "v3.9"
+      },
+      {
+        "value": "https://selenium.wangding.in/2.9/",
+        "text": "v2.9"
+      }]
+    },
     "gtalk": {
       "clientID": "c0fb01d8974fad3f4b9e",
       "clientSecret": "14af1e32e0a8bedc62a6e3ce097ae2fc5e8cc1d8",

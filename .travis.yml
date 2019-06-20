@@ -6,15 +6,19 @@ after_script:
   - gitbook install
   - gitbook build
   - grunt minify
+  - cp CNAME _book
+  - git checkout master
+  - gitbook install
+  - gitbook build . book/2.9
+  - grunt minify
   - cd ./_book
   - git init
   - git config user.name "${USER_NAME}"
   - git config user.email "${USER_EMAIL}"
-  - cp ../CNAME .
   - git add .
   - git commit -m "publish gitbook"
   - git push --force --quiet "https://${ACC_TOKEN}@${GH_REF}" master:${BRANCH}
 
 branches:
   only:
-    - master
+    - v3.9
