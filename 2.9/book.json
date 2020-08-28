@@ -9,7 +9,7 @@
     "-highlight",
     "-sharing",
     "edit-link",
-    "forkmegithub",
+    "forkmegithub-cn",
     "search-plus",
     "sharing-plus",
     "anchor-navigation-ex",
@@ -53,7 +53,7 @@
       "types": ["star"],
       "size": "small"
     },
-    "forkmegithub": {
+    "forkmegithub-cn": {
       "url": "https://github.com/wangding/selenium-ide-doc",
       "color": "red"
     },

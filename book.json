@@ -9,13 +9,12 @@
     "-highlight",
     "-sharing",
     "edit-link",
-    "forkmegithub",
+    "forkmegithub-cn",
     "search-plus",
     "sharing-plus",
     "anchor-navigation-ex",
     "copy-code-button",
     "prism",
-    "github-buttons@2.1.0",
     "splitter",
     "image-captions-extended",
     "bsz",
@@ -48,12 +47,7 @@
     "anchor-navigation-ex": {
       "multipleH1": false
     },
-    "github-buttons": {
-      "repo": "wangding/selenium-ide-doc",
-      "types": ["star"],
-      "size": "small"
-    },
-    "forkmegithub": {
+    "forkmegithub-cn": {
       "url": "https://github.com/wangding/selenium-ide-doc",
       "color": "red"
     },
