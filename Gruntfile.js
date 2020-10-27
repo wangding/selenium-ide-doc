@@ -30,6 +30,12 @@ module.exports = function (grunt) {
         }]
       }
     },
+    unescape: {
+      files: {
+        src: ['_book/*.html', '_book/2.9/*.html'],
+        dist: 'dist/'
+      }
+    },
     replace: {
       html: {
         src: ['_book/*.html', '_book/2.9/*.html'],
@@ -74,6 +80,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-text-replace');
+  grunt.loadNpmTasks('grunt-unescape-html');
 
-  grunt.registerTask('minify', ['replace', 'htmlmin', 'cssmin', 'uglify', 'copy:html', 'copy:js']);
+  grunt.registerTask('minify', ['unescape', 'copy:html', 'replace', 'htmlmin', 'cssmin', 'uglify', 'copy:html', 'copy:js']);
 };
