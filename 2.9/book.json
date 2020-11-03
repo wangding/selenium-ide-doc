@@ -29,11 +29,11 @@
       "gitbookConfigURL": "https://github.com/wangding/selenium-ide-doc/blob/master/book.json",
       "options": [
       {
-        "value": "https://selenium.wangding.in",
+        "value": "https://selenium.wangding.co",
         "text": "v3.9"
       },
       {
-        "value": "https://selenium.wangding.in/2.9/",
+        "value": "https://selenium.wangding.co/2.9/",
         "text": "v2.9"
       }]
     },
@@ -87,7 +87,7 @@
       "caption": "图：_CAPTION_"
     },
     "bsz": {
-      "copyright": "2016&nbsp;-&nbsp;<span class=\"bsz-this-year\"></span>&nbsp;by&nbsp;<a href=\"https://i.wangding.in\">王顶</a>.&nbsp;All rights reserved."
+      "copyright": "2016&nbsp;-&nbsp;<span class=\"bsz-this-year\"></span>&nbsp;by&nbsp;<a href=\"https://i.wangding.co\">王顶</a>.&nbsp;All rights reserved."
     }
   },
   "styles": {
