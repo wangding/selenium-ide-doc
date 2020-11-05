@@ -10,30 +10,30 @@
 
 工具栏上的按钮用来控制测试用例的执行，包括：单步执行的功能用来调试测试用例。最右边的一个红点按钮，是录制测试脚本的。
 
-![](images/chapt3_img06_IDE_features.png)
+![](images/chapt3_img06_IDE_features.webp)
 
-![](images/chapt3_img07_Speed_Control.png)
+![](images/chapt3_img07_Speed_Control.webp)
 速度控制：控制测试用例运行的速度。
 
-![](images/chapt3_img08_Run_All.png)
+![](images/chapt3_img08_Run_All.webp)
 全部运行：运行整个测试套件，当一个测试套件中加载了多个测试用例时。
 
-![](images/chapt3_img09_Run.png)
+![](images/chapt3_img09_Run.webp)
 运行：运行当前选中的测试。当只加载了一个测试用例时，这个按钮和全部运行按钮效果相同。
 
-![](images/chapt3_img10_Pause.png) ![](images/cchapt3_img11_Resume.png)
+![](images/chapt3_img10_Pause.webp) ![](images/cchapt3_img11_Resume.webp)
 暂停/继续：允许停止和重新启动运行测试用例。
 
-![](images/chapt3_img12_Step.png)
+![](images/chapt3_img12_Step.webp)
 单步执行：允许你单步执行测试用例，即，一次运行测试用例中的一个命令。用于调试的测试用例。
 
-![](images/chapt3_img13_TestRunner_Mode.png)
+![](images/chapt3_img13_TestRunner_Mode.webp)
 测试运行模式：这种高级特性允许将一系列的Selenium命令组合成一个单一动作来重复执行。Rollup rules的详细文档在帮助菜单的UI-Element中查看。
 
-![](images/chapt3_img14_Apply_Rollup_Rules.png)
+![](images/chapt3_img14_Apply_Rollup_Rules.webp)
 应用回滚规则：这个高级功能允许一组 Selenium 命令作为一个动作来执行。关于回滚规则的详细文档，请参考帮助菜单的 UI-元素 文档。
 
-![](images/chapt3_img15_Record.png)
+![](images/chapt3_img15_Record.webp)
 录制：录制用户在浏览器中的操作。
 
 
@@ -41,13 +41,13 @@
 
 自动化测试脚本显示在测试用例面板中。它有两个选项卡，一个是表格选项卡，以容易阅读的表格形式来显示命令和参数。
 
-![](images/chapt3_img16_Table_Format.png)
+![](images/chapt3_img16_Table_Format.webp)
 
 另一个是源选项卡，显示存储测试用例文件的原生格式。默认情况下，测试用例的原生文件格式是 HTML，当然可以改变成其他编程语言，如 Java 或 C#，或像 Python 这样的脚本语言。有关详细信息，请参阅 Options 菜单。源视图允许在原代码状态对测试用例进行编辑，包括复制、剪切和粘贴操作。
 
 Command（命令），Target（目标）和 Value（值），三个字段用来显示当前选中命令及其参数。你可以很方便的修改当前选中命令的这三个参数。窗口下方的参考面板中会显示选中命令的完整参考信息，一般来说命令的第一个参数通常都是目标字段。如果在参考面板中显示的命令有第二个参数，则它通常都是值字段。
 
-![](images/chapt3_img17_Entry_Fields.png)
+![](images/chapt3_img17_Entry_Fields.webp)
 
 如果你开始在命令字段键入命令，根据你键入的字符，会出现一个待选的命令下拉列表，您可以从中选择您想要命令。
 
@@ -60,13 +60,13 @@ Command（命令），Target（目标）和 Value（值），三个字段用来�
 
 运行测试用例时，即使你不首先选择日志选项卡，错误消息和正常消息随着测试案例的执行信息会自动显示在此窗格。这些信息通常用于调试测试用例。注意 Clear 按钮用来清除日志。还有 Info 按钮下拉列表允许你选择不同级别的日志信息。
 
-![](images/chapt3_img18_Bottom_Box.png)
+![](images/chapt3_img18_Bottom_Box.webp)
 
 ### 参考窗格
 
 当我们在表格视图下，输入或修改 Selenese 命令或参数时，默认会切换到参考选项卡。在表格视图中，参考面板将显示当前命令的文档。无论在表视图还是在源视图中，当我们输入或修改命令时，确保命令参数中的目标和值字段与参考面板中提示的参数列表信息相匹配，这是至关重要的。参数的数量必须匹配，参数的顺序必须匹配，而且参数的类型必须匹配。如果上述三个方面有任何不匹配之处，命令将不能正确执行。
 
-![](images/chapt3_img19_Bottom_Box_Ref.png)
+![](images/chapt3_img19_Bottom_Box_Ref.webp)
 
 ### UI-元素和回滚窗格
 

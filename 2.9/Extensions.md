@@ -10,7 +10,7 @@
 
 安装这个扩展的步骤为，在 Selenium-IDE 的 Options 菜单 => Options 子菜单项 => General 选项卡下，把 goto_sel_ide.js 在计算机上的路径信息填到 Selenium Core extensions 字段中，即可。
 
-![](images/chapt3_img32_Extensions_install.png)
+![](images/chapt3_img32_Extensions_install.webp)
 
 点选 OK 按钮后，需要关闭并重启 Selenium IDE，以保证扩展文件被载入。对扩展文件的任何修改都需要关闭并重新打开 Selenium-IDE。
 
