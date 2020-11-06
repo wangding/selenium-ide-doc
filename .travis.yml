@@ -10,6 +10,7 @@ after_script:
   - gitbook build 2.9/ _book/2.9/
   - grunt minify
   - cp CNAME _book
+  - cp book.json _book
   - cd _book
   - git init
   - git config user.name "${USER_NAME}"
