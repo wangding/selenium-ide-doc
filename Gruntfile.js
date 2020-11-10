@@ -41,6 +41,12 @@ module.exports = function (grunt) {
         src: ['_book/*.html', '_book/2.9/*.html'],
         overwrite: true,
         replacements: [{
+          form: '<link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">',
+          to: '<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://cdn.jsdelivr.net/gh/wangding/i@master/favicon.svg">'
+        }, {
+          from: '<link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">',
+          to: '<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/wangding/i@master/favicon.svg">'
+        }, {
           from: 'href="gitbook',
           to: 'href="https://cdn.jsdelivr.net/gh/wangding/selenium-ide-doc@gh-pages/gitbook'
         }, {
