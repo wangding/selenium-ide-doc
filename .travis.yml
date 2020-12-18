@@ -11,6 +11,7 @@ after_script:
   - grunt minify
   - cp CNAME _book
   - cp book.json _book
+  - grunt upload
   - cd _book
   - git init
   - git config user.name "${USER_NAME}"

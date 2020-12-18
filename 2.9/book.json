@@ -25,14 +25,14 @@
   ],
   "pluginsConfig": {
     "versions": {
-      "gitbookConfigURL": "https://selenium.wangding.co/book.json",
+      "gitbookConfigURL": "http://selenium.wangding.co/book.json",
       "options": [
       {
-        "value": "https://selenium.wangding.co",
+        "value": "http://selenium.wangding.co",
         "text": "v3.9"
       },
       {
-        "value": "https://selenium.wangding.co/2.9/",
+        "value": "http://selenium.wangding.co/2.9/",
         "text": "v2.9"
       }]
     },
@@ -81,7 +81,7 @@
       "caption": "图：_CAPTION_"
     },
     "bsz": {
-      "copyright": "2016&nbsp;-&nbsp;<span class=\"bsz-this-year\"></span>&nbsp;by&nbsp;<a href=\"https://i.wangding.co\">王顶</a>.&nbsp;All rights reserved."
+      "copyright": "2016&nbsp;-&nbsp;<span class=\"bsz-this-year\"></span>&nbsp;by&nbsp;<a href=\"http://i.wangding.co\">王顶</a>.&nbsp;All rights reserved."
     }
   },
   "styles": {
