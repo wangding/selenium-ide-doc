@@ -1,0 +1,1 @@
+require(["gitbook"],function(t){t.events.on("start",function(t,i){$(".fancybox").fancybox($.extend({loop:!1,afterLoad:function(){this.title=this.index+1+"/"+this.group.length+(this.title?" - "+this.title:"")}},i.fancybox))})});
